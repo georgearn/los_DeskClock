@@ -8,10 +8,10 @@ android {
 
     defaultConfig {
         applicationId "com.android.deskclock"
-        minSdkVersion 27
+        minSdkVersion 31
         targetSdkVersion 34
-        versionCode 1
-        versionName "1.0"
+        versionCode 13
+        versionName "13"
     }
 
     buildTypes {
