@@ -13,9 +13,6 @@ android {
     }
 
     buildTypes {
-        debug {
-            applicationIdSuffix ".dev"
-        }
         release {
             minifyEnabled true
             proguardFiles 'proguard.flags'
