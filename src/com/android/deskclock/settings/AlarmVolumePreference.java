@@ -63,11 +63,14 @@ public class AlarmVolumePreference extends Preference {
         int maxVolume = audioManager.getStreamMaxVolume(STREAM_ALARM) -
                 audioManager.getStreamMinVolume(STREAM_ALARM);
         mSlider = (Slider) holder.findViewById(R.id.seekbar);
+        // Slider requires valueFrom < valueTo, even if the stream has a fixed volume.
+        final float valueTo = Math.max(maxVolume, 1);
         mSlider.setValueFrom(0f);
-        mSlider.setValueTo(maxVolume);
+        mSlider.setValueTo(valueTo);
         mSlider.setStepSize(1f);
-        mSlider.setValue((float) audioManager.getStreamVolume(STREAM_ALARM) -
-                audioManager.getStreamMinVolume(STREAM_ALARM));
+        mSlider.setValue(Math.max(0f, Math.min(valueTo,
+                (float) audioManager.getStreamVolume(STREAM_ALARM) -
+                        audioManager.getStreamMinVolume(STREAM_ALARM))));
         ((ImageView) holder.findViewById(android.R.id.icon))
                 .setImageResource(R.drawable.ic_alarm_small);
 
