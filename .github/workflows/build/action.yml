@@ -13,10 +13,10 @@ runs:
 
     - name: Build with Gradle
       shell: bash
-      run: ./gradlew assembleDebug
+      run: ./gradlew assembleRelease
 
     - uses: actions/upload-artifact@v7
       with:
-        name: DeskClock-debug.apk
-        path: build/outputs/apk/debug/DeskClock-debug.apk
+        name: DeskClock-release.apk
+        path: build/outputs/apk/release/DeskClock-release.apk
         archive: false

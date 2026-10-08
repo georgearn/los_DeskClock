@@ -18,6 +18,7 @@ android {
         release {
             minifyEnabled true
             proguardFiles 'proguard.flags'
+            signingConfig signingConfigs.debug
         }
     }
 
