@@ -1,6 +1,6 @@
-id=los_apps_system
-name=LOS DeskClock and Glimpse (system)
+id=gallery_replacement
+name=Lineage OS apps
 version=v13
 versionCode=13
-author=georgearn
-description=Installs DeskClock and Glimpse as system apps (systemless).
+author=arno
+description=Systemlessly replaces the stock gallery and clock apps with the LineageOS ones (DeskClock, Glimpse).
