@@ -47,6 +47,13 @@ public class AlarmVolumePreference extends Preference {
 
     public AlarmVolumePreference(Context context, AttributeSet attrs) {
         super(context, attrs);
+
+        // Devices without a speaker have a fixed alarm volume, so there is nothing to adjust.
+        final AudioManager audioManager = (AudioManager) context.getSystemService(AUDIO_SERVICE);
+        if (audioManager.getStreamMaxVolume(STREAM_ALARM) <=
+                audioManager.getStreamMinVolume(STREAM_ALARM)) {
+            setVisible(false);
+        }
     }
 
     @Override
