@@ -1,0 +1,6 @@
+id=los_apps_system
+name=LOS DeskClock and Glimpse (system)
+version=v13
+versionCode=13
+author=georgearn
+description=Installs DeskClock and Glimpse as system apps (systemless).
