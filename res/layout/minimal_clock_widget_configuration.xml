@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/appWidgetConfigBackground"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:layout_marginBottom="24dp"
+            android:background="#546E7A">
+
+            <include
+                layout="@layout/minimal_clock_widget"
+                android:layout_width="160dp"
+                android:layout_height="64dp"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+        <Switch
+            android:id="@+id/minimal_clock_bg_switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/minimal_clock_background"
+            android:textColor="?attr/appWidgetConfigTitle"
+            android:checked="true" />
+
+        <RadioGroup
+            android:id="@+id/minimal_clock_style_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/minimal_clock_style_dark"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minHeight="48dp"
+                android:checked="true"
+                android:text="@string/minimal_clock_dark"
+                android:textColor="?attr/appWidgetConfigTitle" />
+
+            <RadioButton
+                android:id="@+id/minimal_clock_style_light"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minHeight="48dp"
+                android:text="@string/minimal_clock_light"
+                android:textColor="?attr/appWidgetConfigTitle" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/minimal_clock_opacity_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="?attr/appWidgetConfigSubtitle" />
+
+        <SeekBar
+            android:id="@+id/minimal_clock_opacity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:max="100" />
+
+        <Button
+            android:id="@+id/minimal_clock_done"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/minimal_clock_done" />
+    </LinearLayout>
+</ScrollView>

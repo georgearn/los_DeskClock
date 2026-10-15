@@ -308,6 +308,27 @@
                 android:resource="@xml/digital_appwidget" />
         </receiver>
 
+        <receiver
+            android:name="com.android.alarmclock.MinimalClockWidgetProvider"
+            android:exported="true"
+            android:label="@string/minimal_clock_gadget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/minimal_clock_appwidget" />
+        </receiver>
+
+        <activity
+            android:name="com.android.alarmclock.MinimalClockConfigurationActivity"
+            android:theme="@style/Theme.DeskClock.DigitalWidgetConfigurationTheme"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+            </intent-filter>
+        </activity>
+
         <service
             android:name="com.android.alarmclock.DigitalAppWidgetCityService"
             android:permission="android.permission.BIND_REMOTEVIEWS" />

@@ -236,6 +236,12 @@
     <string name="analog_gadget">Analog clock</string>
 
     <!-- Label for digital clock gadget displayed in the widget picker. [CHAR LIMIT=18] -->
+    <string name="minimal_clock_gadget">Minimal clock</string>
+    <string name="minimal_clock_background">Rounded background</string>
+    <string name="minimal_clock_dark">Dark</string>
+    <string name="minimal_clock_light">Light</string>
+    <string name="minimal_clock_opacity">Background opacity: <xliff:g id="percent">%1$d</xliff:g>%%</string>
+    <string name="minimal_clock_done">Done</string>
     <string name="digital_gadget">Digital clock</string>
 
     <!-- Settings activity name -->
