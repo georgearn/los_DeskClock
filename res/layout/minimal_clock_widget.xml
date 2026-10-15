@@ -10,9 +10,7 @@
         android:layout_height="match_parent"
         android:importantForAccessibility="no"
         android:scaleType="fitXY"
-        android:src="@drawable/minimal_clock_widget_bg"
-        android:tint="#000000"
-        android:imageAlpha="153" />
+        android:src="@drawable/minimal_clock_widget_bg" />
 
     <TextClock
         android:id="@+id/minimal_clock_time"
